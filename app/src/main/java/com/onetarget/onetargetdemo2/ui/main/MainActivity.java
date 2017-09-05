@@ -1,36 +1,35 @@
 package com.onetarget.onetargetdemo2.ui.main;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.view.MenuItem;
+import android.widget.FrameLayout;
 
 import com.onetarget.onetargetdemo2.R;
 import com.onetarget.onetargetdemo2.mvp.MvpActivity;
-import com.onetarget.onetargetdemo2.ui.leakcanary.LeakcanaryActivity;
-import com.onetarget.onetargetdemo2.ui.login.LoginActivity;
-import com.onetarget.onetargetdemo2.ui.permission.PermissionActivity;
-import com.onetarget.onetargetdemo2.ui.transucent.TransucentActivity;
+import com.onetarget.onetargetdemo2.utils.FragmentSkipUtil;
 import com.onetarget.onetargetdemo2.utils.NormalTitleBar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
-public class MainActivity extends MvpActivity<MainView, MainPresenter> implements MainView, View.OnClickListener {
+public class MainActivity extends MvpActivity<MainView, MainPresenter> implements MainView,  BottomNavigationView.OnNavigationItemSelectedListener {
 
 
-    private static final int REQUEST_CODE = 1;
-    @BindView(R.id.bt_getMessage)
-    Button btGetMessage;
     @BindView(R.id.common_title)
     NormalTitleBar commonTitle;
+    @BindView(R.id.fl_content)
+    FrameLayout flContent;
+    @BindView(R.id.navigation_menu)
+    BottomNavigationView navigationMenu;
 
     @Override
     protected void init() {
-        btGetMessage.setOnClickListener(this);
         commonTitle.setTitleText("首页");
         commonTitle.setBackVisibility(false);
+        navigationMenu.setOnNavigationItemSelectedListener(this);
+        FragmentSkipUtil.switchMainFragment(this,null,1);
     }
 
     @Override
@@ -44,24 +43,7 @@ public class MainActivity extends MvpActivity<MainView, MainPresenter> implement
     }
 
 
-    @OnClick({R.id.bt_getMessage, R.id.bt_permission, R.id.bt_transucent})
-    public void onClick(View v) {
-        Intent intent;
-        switch (v.getId()) {
-            case R.id.bt_getMessage:
-                intent = new Intent(this, LoginActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.bt_permission:
-                intent = new Intent(this, PermissionActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.bt_transucent:
-                intent = new Intent(this, LeakcanaryActivity.class);
-                startActivity(intent);
-                break;
-        }
-    }
+
 
     @Override
     public void callPhone(String phone) {
@@ -77,5 +59,21 @@ public class MainActivity extends MvpActivity<MainView, MainPresenter> implement
         super.onCreate(savedInstanceState);
         // TODO: add setContentView(...) invocation
         ButterKnife.bind(this);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.navigation_home:
+                FragmentSkipUtil.switchMainFragment(this,null,1);
+                return true;
+            case R.id.navigation_function:
+                FragmentSkipUtil.switchMainFragment(this,null,2);
+                return true;
+            case R.id.navigation_person_center:
+                FragmentSkipUtil.switchMainFragment(this,null,3);
+                return true;
+        }
+        return false;
     }
 }
