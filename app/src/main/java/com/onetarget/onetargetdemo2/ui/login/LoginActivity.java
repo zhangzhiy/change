@@ -79,10 +79,4 @@ public class LoginActivity extends MvpActivity<ILoginView, LoginPresenter> imple
         ToastUtil.showToast(this, "登录成功");
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
 }

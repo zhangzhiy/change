@@ -32,7 +32,6 @@ public class LoginPresenter extends MvpRxPresenter<ILoginView, LoginDataMode> {
             getView().dealNoLoginMessage();
             return;
         }
-        //Observable<LoginDataMode> observable = mApiService.getLoginInfo();
         Observable<LoginDataMode> observable = mApiService.getTokenInfo().flatMap(new Func1<TokenDataMode, Observable<LoginDataMode>>() {
             @Override
             public Observable<LoginDataMode> call(TokenDataMode tokenDataMode) {

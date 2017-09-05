@@ -19,9 +19,6 @@ public class MainPresenter extends MvpRxPresenter<MainView,MainDataMode> {
         mApiService = RetrofitUtils.createApi(ApiService.class);
     }
 
-    public void call(String phone ){
-
-    }
 
     @Override
     protected void onNext(MainDataMode data, int requestType) {
