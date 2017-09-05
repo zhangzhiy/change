@@ -20,6 +20,7 @@ public class MainActivity extends MvpActivity<MainView, MainPresenter> implement
     @BindView(R.id.navigation_menu)
     BottomNavigationView navigationMenu;
 
+
     @Override
     protected void init() {
         commonTitle.setTitleText("首页");
@@ -40,6 +41,7 @@ public class MainActivity extends MvpActivity<MainView, MainPresenter> implement
 
     @Override
     public void callPhone(String phone) {
+
 
     }
 
