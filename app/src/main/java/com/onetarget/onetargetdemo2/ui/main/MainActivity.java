@@ -41,6 +41,8 @@ public class MainActivity extends MvpActivity<MainView, MainPresenter> implement
     @Override
     public void callPhone(String phone) {
 
+
+
     }
 
     @Override
@@ -58,4 +60,7 @@ public class MainActivity extends MvpActivity<MainView, MainPresenter> implement
         }
         return false;
     }
+
+    }
+
 }

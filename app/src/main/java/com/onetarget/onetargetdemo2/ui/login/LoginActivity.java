@@ -32,7 +32,7 @@ public class LoginActivity extends MvpActivity<ILoginView, LoginPresenter> imple
     LinearLayout llBg;
     @BindView(R.id.common_title)
     NormalTitleBar commonTitle;
-    
+
     @Override
     protected void init() {
         Utils.hideKeybord(llBg,this);
