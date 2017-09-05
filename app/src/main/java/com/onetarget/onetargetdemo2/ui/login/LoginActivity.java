@@ -1,14 +1,14 @@
 package com.onetarget.onetargetdemo2.ui.login;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.SystemClock;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import com.onetarget.onetargetdemo2.R;
 import com.onetarget.onetargetdemo2.mvp.MvpActivity;
+import com.onetarget.onetargetdemo2.utils.NormalTitleBar;
 import com.onetarget.onetargetdemo2.utils.ToastUtil;
 import com.onetarget.onetargetdemo2.utils.Utils;
 
@@ -30,17 +30,19 @@ public class LoginActivity extends MvpActivity<ILoginView, LoginPresenter> imple
     Button btLogin;
     @BindView(R.id.ll_bg)
     LinearLayout llBg;
-
+    @BindView(R.id.common_title)
+    NormalTitleBar commonTitle;
     @Override
     protected void init() {
         Utils.hideKeybord(llBg,this);
-//        new AsyncTask<Void, Void, Void>() {
-//            @Override protected Void doInBackground(Void... params) {
-//                // Do some slow work in background
-//                SystemClock.sleep(20000);想·
-//                return null;
-//            }
-//        }.execute();
+
+        commonTitle.setTitleText("登录");
+        commonTitle.setOnBackListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     @Override

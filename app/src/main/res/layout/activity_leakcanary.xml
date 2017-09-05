@@ -3,22 +3,17 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical">
+
     <com.onetarget.onetargetdemo2.utils.NormalTitleBar
         android:id="@+id/common_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
     </com.onetarget.onetargetdemo2.utils.NormalTitleBar>
-    <Button
-        android:id="@+id/bt_save_data"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="@string/save_data"/>
 
     <Button
-        android:id="@+id/bt_call"
+        android:id="@+id/bt_costTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="@string/bt_call"/>
+        android:text="执行耗时操作"/>
 </LinearLayout>

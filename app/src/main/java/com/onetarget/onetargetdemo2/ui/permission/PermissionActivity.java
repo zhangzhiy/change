@@ -6,6 +6,7 @@ import android.widget.Button;
 
 import com.onetarget.onetargetdemo2.R;
 import com.onetarget.onetargetdemo2.mvp.MvpActivity;
+import com.onetarget.onetargetdemo2.utils.NormalTitleBar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -21,10 +22,17 @@ public class PermissionActivity extends MvpActivity<IPermissionView, PermissionP
     Button btSaveData;
     @BindView(R.id.bt_call)
     Button btCall;
-
+    @BindView(R.id.common_title)
+    NormalTitleBar commonTitle;
     @Override
     protected void init() {
-
+        commonTitle.setTitleText("6.0权限");
+        commonTitle.setOnBackListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     @Override
