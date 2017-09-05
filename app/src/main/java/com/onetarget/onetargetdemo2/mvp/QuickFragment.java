@@ -7,11 +7,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+
 /**
  * @author Hannes Dorfmann
  * @since 1.0.0
  */
 public abstract class QuickFragment extends Fragment {
+    Unbinder unbinder;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -32,8 +36,9 @@ public abstract class QuickFragment extends Fragment {
                             + "If you don't want to use getLayoutRes() but implement your own view for this "
                             + "fragment manually, then you have to override onCreateView();");
         } else {
-            View v = inflater.inflate(layoutRes, container, false);
-            return v;
+            View rootView = inflater.inflate(layoutRes, container, false);
+            unbinder = ButterKnife.bind(this, rootView);
+            return rootView;
         }
     }
 
@@ -44,8 +49,9 @@ public abstract class QuickFragment extends Fragment {
     }
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
     }
 
     /**

@@ -2,23 +2,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/YT_9BE4FF"
               android:orientation="vertical">
     <com.onetarget.onetargetdemo2.utils.NormalTitleBar
         android:id="@+id/common_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    </com.onetarget.onetargetdemo2.utils.NormalTitleBar>
+       </com.onetarget.onetargetdemo2.utils.NormalTitleBar>
     <Button
-        android:id="@+id/bt_save_data"
+        android:id="@+id/bt_transucent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="@string/save_data"/>
+        android:text="沉浸式状态栏"/>
 
     <Button
-        android:id="@+id/bt_call"
+        android:id="@+id/bt_black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="@string/bt_call"/>
+        android:text="状态栏为黑色"/>
+
+    <Button
+        android:id="@+id/bt_write"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="状态栏为白色"/>
+
+    <Button
+        android:id="@+id/bt_getheight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="获取状态栏高度"/>
 </LinearLayout>

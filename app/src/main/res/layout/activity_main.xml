@@ -1,20 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
-    <Button
-        android:id="@+id/bt_getMessage"
-        android:text="获取信息"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/bt_permission"
-        android:text="获取权限"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
 
+    <com.onetarget.onetargetdemo2.utils.NormalTitleBar
+        android:id="@+id/common_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+    </com.onetarget.onetargetdemo2.utils.NormalTitleBar>
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </FrameLayout>
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:itemBackground="@color/YT_4DA8F6"
+        app:itemIconTint="@color/YT_FFFFFF"
+        app:itemTextColor="@color/YT_FFFFFF"
+        app:menu="@menu/main_navigation">
+
+    </android.support.design.widget.BottomNavigationView>
 </LinearLayout>

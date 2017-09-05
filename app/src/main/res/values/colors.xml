@@ -5,4 +5,73 @@
     <color name="colorAccent">#FF4081</color>
     <color name="YT_FEFEFE">#FEFEFE</color>
     <color name="YT_FFFFFF">#FFFFFF</color>
+
+    <color name="YT_E5E5E5">#E5E5E5</color>
+    <color name="YT_EEEEEE">#EEEEEE</color>
+    <color name="YT_8E8E8E">#8E8E8E</color>
+    <color name="YT_338be9">#338be9</color>
+    <color name="YT_4DA8F6">#4DA8F6</color>
+
+    <color name="YT_62a4eb">#62a4eb</color>
+
+    <color name="YT_A1A1A1">#A1A1A1</color>
+    <color name="YT_505050">#505050</color>
+    <color name="YT_7b7b7b">#7b7b7b</color>
+    <color name="YT_B8B8B8">#B8B8B8</color>
+    <color name="YT_EBEBEB">#EBEBEB</color>
+
+    <color name="YT_EDF2F6">#EDF2F6</color>
+    <color name="YT_9BE4FF">#9be4ff</color>
+    <color name="YT_DADADA">#DADADA</color>
+    <color name="YT_00B4F7">#00B4F7</color>
+    <color name="YT_0DA2E0">#0DA2E0</color>
+    <color name="YT_D6EFFF">#D6EFFF</color>
+    <color name="YT_F6F6F6">#F6F6F6</color>
+    <color name="YT_E0F1FF">#E0F1FF</color>
+    <color name="YT_C4C3C3">#C4C3C3</color>
+    <color name="YT_C8C8C8">#C8C8C8</color>
+    <color name="YT_FFCC02">#FFCC02</color>
+    <color name="YT_282828">#282828</color>
+
+    <color name="YT_FF7200">#FF7200</color>
+    <color name="YT_F3F3F3">#F3F3F3</color>
+    <color name="YT_F0F0F0">#F0F0F0</color>
+    <color name="YT_3395EA">#3395EA</color>
+    <color name="YT_D1D1D1">#D1D1D1</color>
+    <color name="YT_E3E3E3">#E3E3E3</color>
+    <color name="YT_BABABA">#BABABA</color>
+    <color name="YT_b2b2b2">#b2b2b2</color>
+    <color name="YT_666868">#666868</color>
+    <color name="YT_c2c2c2">#c2c2c2</color>
+
+    <!--新色值尽量接着下面写-->
+    <color name="YT_FFC963">#FFC963</color>
+    <color name="YT_EDB13E">#EDB13E</color>
+    <color name="YT_338BE9">#338BE9</color>
+    <color name="YT_D9D7D7">#D9D7D7</color>
+    <color name="YT_62A4EB">#62A4EB</color>
+    <color name="YT_4EA8F6">#4EA8F6</color>
+    <color name="YT_F05858">#f05858</color>
+    <color name="YT_F5F5F5">#f5f5f5</color>
+    <color name="YT_F26950">#F26950</color>
+    <color name="YT_C73D3D">#C73D3D</color>
+    <color name="YT_EAEAEA">#EAEAEA</color>
+    <color name="YT_EFEFEF">#EFEFEF</color>
+    <color name="YT_E0E0E0">#E0E0E0</color>
+    <color name="YT_8F8E94">#8F8E94</color>
+    <color name="YT_000000">#000000</color>
+    <color name="YT_88000000">#88000000</color>
+    <color name="YT_00000000">#00000000</color>
+    <color name="YT_BBFFFFFF">#88FFFFFF</color>
+    <color name="YT_B2B2B2">#B2B2B2</color>
+    <color name="YT_D0D0D0">#D0D0D0</color>
+    <color name="YT_7B7B7B">#7B7B7B</color>
+    <color name="YT_424242">#424242</color>
+    <color name="YT_333333">#333333</color>
+    <color name="YT_C2C2C2">#C2C2C2</color>
+    <color name="YT_CACACA">#CACACA</color>
+    <color name="YT_919191">#919191</color>
+    <color name="YT_929292">#929292</color>
+    <color name="YT_9B9B9B">#9B9B9B</color>
+    <color name="YT_96C9FF">#96C9FF</color>
 </resources>

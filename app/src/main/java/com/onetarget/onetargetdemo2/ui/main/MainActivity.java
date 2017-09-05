@@ -1,37 +1,31 @@
 package com.onetarget.onetargetdemo2.ui.main;
 
-import android.Manifest;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.os.Build;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.view.View;
-import android.widget.Button;
+import android.support.design.widget.BottomNavigationView;
+import android.view.MenuItem;
+import android.widget.FrameLayout;
 
 import com.onetarget.onetargetdemo2.R;
 import com.onetarget.onetargetdemo2.mvp.MvpActivity;
-import com.onetarget.onetargetdemo2.mvp.MvpPresenter;
-import com.onetarget.onetargetdemo2.ui.login.LoginActivity;
-import com.onetarget.onetargetdemo2.ui.permission.PermissionActivity;
-import com.onetarget.onetargetdemo2.utils.ToastUtil;
+import com.onetarget.onetargetdemo2.utils.FragmentSkipUtil;
+import com.onetarget.onetargetdemo2.utils.NormalTitleBar;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
-public class MainActivity extends MvpActivity<MainView, MainPresenter> implements MainView, View.OnClickListener {
-
-
-    private static final int REQUEST_CODE = 1;
-    @BindView(R.id.bt_getMessage)
-    Button btGetMessage;
+public class MainActivity extends MvpActivity<MainView, MainPresenter> implements MainView,  BottomNavigationView.OnNavigationItemSelectedListener {
+    @BindView(R.id.common_title)
+    NormalTitleBar commonTitle;
+    @BindView(R.id.fl_content)
+    FrameLayout flContent;
+    @BindView(R.id.navigation_menu)
+    BottomNavigationView navigationMenu;
 
     @Override
     protected void init() {
-        btGetMessage.setOnClickListener(this);
+        commonTitle.setTitleText("首页");
+        commonTitle.setBackVisibility(false);
+        navigationMenu.setOnNavigationItemSelectedListener(this);
+        FragmentSkipUtil.switchMainFragment(this,null,1);
     }
 
     @Override
@@ -44,31 +38,24 @@ public class MainActivity extends MvpActivity<MainView, MainPresenter> implement
         return new MainPresenter(this);
     }
 
-
-
-    @OnClick({R.id.bt_getMessage, R.id.bt_permission})
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.bt_getMessage:
-               // callPhone("10086");
-                Intent intent=new Intent(this, LoginActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.bt_permission:
-                // callPhone("10086");
-                Intent intent2=new Intent(this, PermissionActivity.class);
-                startActivity(intent2);
-                break;
-        }
-    }
-
     @Override
     public void callPhone(String phone) {
 
     }
 
-    private void call() {
-
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.navigation_home:
+                FragmentSkipUtil.switchMainFragment(this,null,1);
+                return true;
+            case R.id.navigation_function:
+                FragmentSkipUtil.switchMainFragment(this,null,2);
+                return true;
+            case R.id.navigation_person_center:
+                FragmentSkipUtil.switchMainFragment(this,null,3);
+                return true;
+        }
+        return false;
     }
-
 }
