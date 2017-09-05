@@ -1,6 +1,5 @@
 package com.onetarget.onetargetdemo2.ui.main;
 
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.view.MenuItem;
@@ -12,11 +11,8 @@ import com.onetarget.onetargetdemo2.utils.FragmentSkipUtil;
 import com.onetarget.onetargetdemo2.utils.NormalTitleBar;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class MainActivity extends MvpActivity<MainView, MainPresenter> implements MainView,  BottomNavigationView.OnNavigationItemSelectedListener {
-
-
     @BindView(R.id.common_title)
     NormalTitleBar commonTitle;
     @BindView(R.id.fl_content)
@@ -42,23 +38,9 @@ public class MainActivity extends MvpActivity<MainView, MainPresenter> implement
         return new MainPresenter(this);
     }
 
-
-
-
     @Override
     public void callPhone(String phone) {
 
-    }
-
-    private void call() {
-
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
     }
 
     @Override
