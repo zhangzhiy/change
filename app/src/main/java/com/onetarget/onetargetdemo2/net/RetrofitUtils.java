@@ -147,7 +147,7 @@ public class RetrofitUtils implements AppConstants {
      */
     static class GzipRequestInterceptor implements Interceptor {
         @Override
-        public Response intercept(Interceptor.Chain chain) throws IOException {
+        public Response intercept(Chain chain) throws IOException {
             Request originalRequest = chain.request();
             if (originalRequest.body() == null || originalRequest.header("Content-Encoding") != null) {
                 return chain.proceed(originalRequest);
