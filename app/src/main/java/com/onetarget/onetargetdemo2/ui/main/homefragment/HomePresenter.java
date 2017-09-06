@@ -1,4 +1,4 @@
-package com.onetarget.onetargetdemo2.ui.main.fragment;
+package com.onetarget.onetargetdemo2.ui.main.homefragment;
 
 import android.content.Context;
 
