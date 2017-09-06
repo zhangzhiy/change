@@ -5,6 +5,7 @@ package com.onetarget.onetargetdemo2.net;
 
 import com.onetarget.onetargetdemo2.ui.login.LoginDataMode;
 import com.onetarget.onetargetdemo2.ui.login.TokenDataMode;
+import com.onetarget.onetargetdemo2.ui.main.homefragment.HomeModel;
 
 import retrofit2.http.GET;
 import rx.Observable;
@@ -16,4 +17,7 @@ public interface ApiService {
 
     @GET("appKey.json")
     Observable<TokenDataMode> getTokenInfo();
+
+    @GET("home.json")
+    Observable<HomeModel> getHomeInfo();
 }

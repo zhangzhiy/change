@@ -58,7 +58,7 @@ public class FragmentMvpDelegateImpl<V extends MvpView, P extends MvpPresenter<V
 
   @Override
   public void onCreate(Bundle saved) {
-
+    getInternalDelegate().createPresenter();
   }
 
   @Override
@@ -68,7 +68,7 @@ public class FragmentMvpDelegateImpl<V extends MvpView, P extends MvpPresenter<V
 
   @Override
   public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-    getInternalDelegate().createPresenter();
+  //getInternalDelegate().createPresenter();   原来在这里，但是fragment中直接在init方法中使用presenter方法会报错，因为init方法走 再了creatPersenter前面，所以放到onCreate方法中
     getInternalDelegate().attachView();
   }
 
