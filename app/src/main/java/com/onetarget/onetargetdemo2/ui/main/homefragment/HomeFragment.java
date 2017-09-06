@@ -87,7 +87,7 @@ public class HomeFragment extends MvpFragment<HomeView,HomePresenter> implements
         public void displayImage(Context context, Object path, ImageView imageView) {
             HomeModel.DataBean.BannerDataBean bannerDataBean= (HomeModel.DataBean.BannerDataBean) path;
             Glide.with(getActivity()).load(bannerDataBean.getImgUrl()).into(imageView);
-            Logger.v("sss",bannerDataBean.getImgUrl());
+            Logger.v(TAG,bannerDataBean.getImgUrl());
         }
     }
 

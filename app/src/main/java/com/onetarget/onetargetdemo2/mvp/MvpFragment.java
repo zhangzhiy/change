@@ -36,7 +36,7 @@ import com.onetarget.onetargetdemo2.mvp.delegate.MvpDelegateCallback;
  */
 public abstract class MvpFragment<V extends MvpView, P extends MvpPresenter<V>>
     extends QuickFragment implements MvpDelegateCallback<V, P>, MvpView {
-
+  protected static final String TAG ="MvpFragment" ;
   protected FragmentMvpDelegate<V, P> mvpDelegate;
 
   /**

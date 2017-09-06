@@ -42,7 +42,7 @@ import rx.schedulers.Schedulers;
  */
 public abstract class MvpActivity<V extends MvpView, P extends MvpPresenter<V>>extends QuickActivity
         implements MvpDelegateCallback<V, P>, MvpView {
-
+  protected static final String TAG ="MvpActivity" ;
   protected ActivityMvpDelegate mvpDelegate;
   protected P presenter;
   protected Subscription eventSubscription;
