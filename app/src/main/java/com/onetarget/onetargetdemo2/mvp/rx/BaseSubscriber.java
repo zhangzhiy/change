@@ -6,6 +6,7 @@ import com.google.gson.JsonSyntaxException;
 
 import java.io.EOFException;
 import java.net.ConnectException;
+import java.net.NoRouteToHostException;
 import java.net.SocketTimeoutException;
 
 import com.onetarget.onetargetdemo2.R;
@@ -52,6 +53,8 @@ public abstract class BaseSubscriber<T> extends Subscriber<T> implements Progres
         }else if(e instanceof JsonSyntaxException){
             warningText=context.getResources().getString(R.string.error_data_format);
         }else if(e instanceof SocketTimeoutException){
+            warningText=context.getResources().getString(R.string.connect_time_out);
+        }else if(e instanceof NoRouteToHostException){
             warningText=context.getResources().getString(R.string.connect_time_out);
         }else if(e instanceof ConnectException){
             if(Utils.isNetConnect(context)){

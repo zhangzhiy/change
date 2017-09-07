@@ -45,7 +45,9 @@ public class HomeFragment extends MvpFragment<HomeView,HomePresenter> implements
 
     @Override
     protected void init() {
-        getPresenter().getData();
+        if(homeLists==null||homeLists.size()==0){
+            getPresenter().getData();
+        }
     }
 
     private void initRecyclerview() {

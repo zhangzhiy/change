@@ -38,9 +38,11 @@ class HomePresenter extends MvpRxPresenter<HomeView,HomeModel> {
                     getView().initRecyclerView(data);
                 }else {
                     getView().dealError(mContext.getString(R.string.error_data_format));
+                    Logger.v(TAG,"2222==="+data.getMsg());
                 }
             }else {
                 getView().dealError(data.getMsg());
+                Logger.v(TAG,"sss==="+data.getMsg());
             }
         }else {
             getView().dealError(mContext.getString(R.string.server_has_error));
