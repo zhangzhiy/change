@@ -11,8 +11,10 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.onetarget.onetargetdemo2.R;
 import com.onetarget.onetargetdemo2.mvp.MvpFragment;
+import com.onetarget.onetargetdemo2.utils.GlideLoader;
 import com.onetarget.onetargetdemo2.utils.Logger;
 import com.onetarget.onetargetdemo2.utils.ToastUtil;
 import com.scwang.smartrefresh.header.MaterialHeader;
@@ -65,11 +67,18 @@ public class HomeFragment extends MvpFragment<HomeView,HomePresenter> implements
     private void initRecyclerview() {
         rvHome.addItemDecoration(new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL));
         rvHome.setLayoutManager(new LinearLayoutManager(getActivity()));
-        homeAdapter = new HomeAdapter(R.layout.item_home,homeLists);
+        homeAdapter = new HomeAdapter(R.layout.item_home,homeLists,getActivity());
         rvHome.setAdapter(homeAdapter);
+        homeAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+               ToastUtil.showToast(getActivity(),homeLists.get(position).getTitle());
+            }
+        });
+
+
         //srlHome.setEnableAutoLoadmore(false);
         //srlHome.setEnableRefresh(false);
-        //setDefaultHeaderAndFooter();
         //设置header，footer的优先级，全局<xmldefine<codedefine
         srlHome.setRefreshHeader(new com.onetarget.onetargetdemo2.utils.ClassicsHeader(getActivity()));
         srlHome.setOnRefreshListener(new OnRefreshListener() {
@@ -87,7 +96,7 @@ public class HomeFragment extends MvpFragment<HomeView,HomePresenter> implements
                     public void run() {
 
                         if (homeAdapter.getItemCount() > 10) {
-                            Toast.makeText(getActivity(), "数据全部加载完毕", Toast.LENGTH_SHORT).show();
+                          //  Toast.makeText(getActivity(), "数据全部加载完毕", Toast.LENGTH_SHORT).show();
                             refreshlayout.setLoadmoreFinished(true);//将不会再次触发加载更多事件
                         }else {
                             homeAdapter.setNewData(refreshData());
@@ -99,28 +108,7 @@ public class HomeFragment extends MvpFragment<HomeView,HomePresenter> implements
         });
     }
 
-    /**
-     * 设置RecyclerView默认的全局footer和header
-     * 优先级最低，如果在布局中写入footer和header可以直接覆盖
-     * 需要在布局生成之前设置，所以建议放到Application.onCreate中
-     * SmartRefreshLayout
-     */
-    private void setDefaultHeaderAndFooter() {
-        SmartRefreshLayout.setDefaultRefreshFooterCreater(new DefaultRefreshFooterCreater() {
-            @NonNull
-            @Override
-            public RefreshFooter createRefreshFooter(Context context, RefreshLayout layout) {
-                return new ClassicsFooter(getActivity());
-            }
-        });
-        SmartRefreshLayout.setDefaultRefreshHeaderCreater(new DefaultRefreshHeaderCreater() {
-            @NonNull
-            @Override
-            public RefreshHeader createRefreshHeader(Context context, RefreshLayout layout) {
-                return new MaterialHeader(getActivity());
-            }
-        });
-    }
+
 
     private List<HomeModel.DataBean.ListDataBean> refreshData() {
          homeLists.add(homeLists.get(0));
@@ -160,7 +148,8 @@ public class HomeFragment extends MvpFragment<HomeView,HomePresenter> implements
         @Override
         public void displayImage(Context context, Object path, ImageView imageView) {
             HomeModel.DataBean.BannerDataBean bannerDataBean= (HomeModel.DataBean.BannerDataBean) path;
-            Glide.with(getActivity()).load(bannerDataBean.getImgUrl()).into(imageView);
+//            Glide.with(getActivity()).load(bannerDataBean.getImgUrl()).into(imageView);
+            GlideLoader.displayImage(getActivity(),bannerDataBean.getImgUrl(),imageView);
             Logger.v(TAG,bannerDataBean.getImgUrl());
         }
     }

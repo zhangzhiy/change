@@ -19,6 +19,7 @@ import com.scwang.smartrefresh.layout.internal.pathview.PathsView;
 import com.scwang.smartrefresh.layout.util.DensityUtil;
 
 /**
+ * 自定义recyclerview的header
  * Created by zzy on 2017/9/7.
  */
 

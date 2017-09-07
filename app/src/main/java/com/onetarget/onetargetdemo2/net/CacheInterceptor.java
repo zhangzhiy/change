@@ -32,9 +32,10 @@ public class CacheInterceptor implements Interceptor {
         if (Utils.isNetConnect(QuickApplication.getInstance())) {
             //有网的时候读接口上的@Headers里的配置，你可以在这里进行统一的设置
             //String cacheControl = request.cacheControl().toString();
-            String cacheControl="public,max-age=0";
+           // String cacheControl="public,max-age=0";
             //当然如果你想在有网络的情况下都直接走网络，那么只需要
             //将其超时时间设置为0即可:String cacheControl="Cache-Control:public,max-age=0"
+            String cacheControl="Cache-Control:public,max-age=0";
             return originalResponse.newBuilder()
                     .header("Cache-Control", cacheControl)
                     .removeHeader("Pragma")
