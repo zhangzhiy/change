@@ -31,7 +31,6 @@ public class HomeAdapter extends BaseQuickAdapter<HomeModel.DataBean.ListDataBea
     protected void convert(BaseViewHolder helper, HomeModel.DataBean.ListDataBean item) {
         helper.setText(R.id.tv_item_title,item.getTitle())
                 .setText(R.id.tv_item_desc,item.getDesc());
-        Logger.v(TAG,"sss"+item.getPictureUrl());
         GlideLoader.displayRoundImage(context,item.getPictureUrl(),(ImageView)helper.getView(R.id.item_image));
     }
 
