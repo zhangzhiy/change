@@ -6,7 +6,7 @@ public interface AppConstants {
      * use for server
      *******************************/
 
-    String APP_BASE_URL = "http://192.168.10.232:8080/zzy/";
+    String APP_BASE_URL = "http://192.168.10.77:8080/zzy/";
 
     boolean DEBUG = true;
 

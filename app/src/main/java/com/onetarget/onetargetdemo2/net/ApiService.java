@@ -3,6 +3,8 @@ package com.onetarget.onetargetdemo2.net;
 
 
 
+import com.bumptech.glide.annotation.GlideModule;
+import com.onetarget.onetargetdemo2.ui.glide.GlideModel;
 import com.onetarget.onetargetdemo2.ui.login.LoginDataMode;
 import com.onetarget.onetargetdemo2.ui.login.TokenDataMode;
 import com.onetarget.onetargetdemo2.ui.main.homefragment.HomeModel;
@@ -20,4 +22,7 @@ public interface ApiService {
 
     @GET("home.json")
     Observable<HomeModel> getHomeInfo();
+
+    @GET("glide.json")
+    Observable<GlideModel> getGlideInfo();
 }

@@ -33,6 +33,8 @@ public class FragmentSkipUtil {
         FragmentTransaction ft = manager.beginTransaction();
         MvpFragment fragment;
         fragment = newFragment(currentPager, bundle);
+        //设置fragment切换的动画
+        //ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
         ft.replace(R.id.fl_content, fragment);
         ft.commitAllowingStateLoss();
     }

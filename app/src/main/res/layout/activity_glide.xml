@@ -9,10 +9,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <ImageView
+        android:layout_margin="20dp"
+        android:id="@+id/iv_show"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"/>
 
-    <Button
-        android:id="@+id/bt_costTime"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rl_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="执行耗时操作"/>
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+
 </LinearLayout>

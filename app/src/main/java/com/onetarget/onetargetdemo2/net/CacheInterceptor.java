@@ -24,7 +24,7 @@ public class CacheInterceptor implements Interceptor {
         Request request = chain.request();
         if (!Utils.isNetConnect(QuickApplication.getInstance())) {
             request = request.newBuilder()
-                    .cacheControl(CacheControl.FORCE_CACHE)
+                    .cacheControl(CacheControl.FORCE_NETWORK)
                     .build();
         }
 

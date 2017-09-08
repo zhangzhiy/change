@@ -1,6 +1,7 @@
 package com.onetarget.onetargetdemo2.ui.main.homefragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,6 +15,7 @@ import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.onetarget.onetargetdemo2.R;
 import com.onetarget.onetargetdemo2.mvp.MvpFragment;
+import com.onetarget.onetargetdemo2.ui.glide.GlideActivity;
 import com.onetarget.onetargetdemo2.utils.GlideLoader;
 import com.onetarget.onetargetdemo2.utils.Logger;
 import com.onetarget.onetargetdemo2.utils.ToastUtil;
@@ -72,7 +74,10 @@ public class HomeFragment extends MvpFragment<HomeView,HomePresenter> implements
         homeAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-               ToastUtil.showToast(getActivity(),homeLists.get(position).getTitle());
+                if(position==0){
+                    Intent intent=new Intent(getActivity(), GlideActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 
