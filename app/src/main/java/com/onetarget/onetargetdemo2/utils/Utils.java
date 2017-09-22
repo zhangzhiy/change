@@ -2,6 +2,8 @@ package com.onetarget.onetargetdemo2.utils;
 
 
 import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Environment;
@@ -115,5 +117,25 @@ public  class Utils {
 				return false;
 			}
 		});
+	}
+	public static int getVersionCode(Context context) {
+		try {
+			PackageManager pm = context.getPackageManager();
+			PackageInfo pi = pm.getPackageInfo(context.getPackageName(), 0);
+			return pi.versionCode;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
+	public static String getVersionName(Context context) {
+		try {
+			PackageManager pm = context.getPackageManager();
+			PackageInfo pi = pm.getPackageInfo(context.getPackageName(), 0);
+			return pi.versionName;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return "1.0.0";
 	}
 }

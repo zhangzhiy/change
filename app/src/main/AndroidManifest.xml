@@ -8,6 +8,7 @@
     <!-- 挂载sd卡 -->
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
     <!-- 外部存储设备读写 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <!-- 监听网络情况 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -24,6 +25,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/YtAppStyle">
+        <meta-data android:name="com.taobao.android.hotfix.IDSECRET"
+                   android:value="24631849-1" />
+        <meta-data android:name="com.taobao.android.hotfix.APPSECRET"
+                   android:value="1ec245b8d5eb6b0ad349c60d23be6d65" />
+        <meta-data android:name="com.taobao.android.hotfix.RSASECRET"
+                   android:value="MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDTwepSe/vm+np/sjoI2K7TxMusssOqk8iP7eC5gaQ6SaSm+yRACFsO7Sy8CyoqF3L8Ik/9MlGKaPXj/rVLXi0eQgTlxlWD8c0+PPMYJiwr8w9jXKltHN+zcsXMDNMXUDj23e06Jvb3GVEuDvMvf3rajLj9yB5ppcD40bv94eJHYZnOCbO5NHl8Q5k3OO41VgQehaPAviCnJj7pqH//qCov3rN691yh9LcXsIuMKb74qeUaFO3TcVk6FSD8AeXDGJCBXmO7xI8dPCqwmQsjlpdqqskbYyPJC81JLqhadsuIpegYxyYulOy5ox/KF55LKWIMZBbqnCwYabnXhv6JBO1xAgMBAAECggEAf0K46h1tBCFgYUHhMtPWLZrFtOIySV9LV4RkW9gXtJfxhhDEdl8PKmdLTS+AhY9WIUUVwVruOjpeHElE9yiAAQE4JEcPuZ4l9NN4XPkD7t3CT7qub868egHt8XV7nzUtJt+05A/quBHVAdMmP1Njp9iOjKYp8OAWmvKhAjEwZiie3FUF8LTyVIhcpPrVSjV4wodRyjYYHlrX2TyHg5eSMRQ+Zm5kLGJvBMvJAAAg7my2siolOSrxelydsns1TqnITDzzVm103uIifXrD3nNdfT4jUxDN/6mjDTDjnkC3T9z8Yl32SOKHsKXZlZx9vY+nnlAdE7HjSEm9W5FB1J+1YQKBgQD/ClEuKzAOVEKM7bTR1sGEH+QCOR7vN1b11I9pYTokQSXsJ6aYbyaoBLvHK5DK+X2uOQor44H1KpuNtFeFWFJ7wYUNToCoJ7IAXgjGXgOMu86Msm28qqsDRp+5jB5tiYgyW7xvw1wxsMH/lj5pb5eO/lP0oNDQy2y+dhpQ3N3bDQKBgQDUjedHfycsMJr0dpoUCwBF3FaLJcm9DIakiJ9bEtwQ0mfswn7VNbZ+nXlZy6QxEKV61cDBUVbw5upsiL+Ui8xrKEDRFOBN4ybdqq3mGehLCjKP7+6Y3Wii3OzPbkNtgFELIvtlFpOHV0GyqKzD54HTy85cNyjlHulDkk/SxiDy9QKBgQDhH0FDSJn1vAi2j0iSBUfyEZhZIgSdUbLv8f3ZHhqNT/hieSmD2nE71FnQWDNKB2oZ9H12+i6Hs2F1dt/ec3TzioGgmk/Unp1v15FVUD0/57NN3F4jMF8d2CQ7S2S8ea8ADJvL550ku4qyyfMzbG5SqUqAX8eS1k2Z3XQjNqKarQKBgQCxkbLrWeCB3EE3hXWG1QHvWvm52WHF25cIEVL/pKvQKdbERl/rAqpo8GmWiLesfbmg+r3DQo6dRmwFK+DQ2lF2G/S6NvSEXQX1HUeV+YLEXcqL0OfFMQLfPC1hxT3zVsVdxmW6t7eb01uBQ8TBDMC7DYJiK3qwnrhEyRCChx6zmQKBgQD3PzCFdlZ+PtQ/SOKjUGIAcf+HTVZYSdc/u2XXEKcOTLJYCE+MNuTKxCVxCJIaB3GdsAkNy130aRNWBiw5DwRBsIBuvChCBuqa+NIpgyGyk4DYwHZWw7P6+6eAu/uaMBiJ1a+TuljWJuOHoTxHKWb0/r2+dnCKXTjR7VEr4VXVBQ==" />
+
+
         <activity
             android:name="com.onetarget.onetargetdemo2.ui.main.MainActivity"
             android:screenOrientation="portrait"

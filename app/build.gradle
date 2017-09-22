@@ -8,8 +8,8 @@ android {
         applicationId "com.onetarget.onetargetdemo2"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "3.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     signingConfigs {
@@ -68,6 +68,8 @@ dependencies {
     compile "com.github.bumptech.glide:okhttp3-integration:4.0.0"
 
     compile 'com.youth.banner:banner:1.4.9'
+
+    compile 'com.aliyun.ams:alicloud-android-hotfix:3.1.2'
 
 
 }
