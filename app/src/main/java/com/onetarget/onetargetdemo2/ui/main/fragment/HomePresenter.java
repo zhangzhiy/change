@@ -2,8 +2,7 @@ package com.onetarget.onetargetdemo2.ui.main.fragment;
 
 import android.content.Context;
 
-import com.onetarget.onetargetdemo2.mvp.MvpPresenter;
-import com.onetarget.onetargetdemo2.mvp.rx.scheduler.MvpRxPresenter;
+import com.onetarget.common.mvp.rx.scheduler.MvpRxPresenter;
 
 /**
  * Created by zzy on 2017/9/5.

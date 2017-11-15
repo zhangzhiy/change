@@ -1,7 +1,7 @@
 package com.onetarget.onetargetdemo2.ui.login;
 
 
-import com.onetarget.onetargetdemo2.mvp.BaseMode;
+import com.onetarget.common.mvp.BaseMode;
 
 /**
  * Created by onetarget on 2017/7/11.

@@ -5,9 +5,9 @@ import android.content.Context;
 import android.os.Environment;
 import android.support.annotation.NonNull;
 
-import com.onetarget.onetargetdemo2.mvp.rx.scheduler.MvpRxPresenter;
-import com.onetarget.onetargetdemo2.utils.FileUtils;
-import com.onetarget.onetargetdemo2.utils.ToastUtil;
+import com.onetarget.common.mvp.rx.scheduler.MvpRxPresenter;
+import com.onetarget.common.utils.FileUtils;
+import com.onetarget.common.utils.ToastUtil;
 import com.yanzhenjie.permission.AndPermission;
 import com.yanzhenjie.permission.Permission;
 import com.yanzhenjie.permission.PermissionListener;

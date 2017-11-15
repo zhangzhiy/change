@@ -4,11 +4,10 @@ package com.onetarget.onetargetdemo2.utils;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.widget.FrameLayout;
 
 import com.onetarget.onetargetdemo2.R;
-import com.onetarget.onetargetdemo2.mvp.MvpActivity;
-import com.onetarget.onetargetdemo2.mvp.MvpFragment;
+import com.onetarget.common.mvp.MvpActivity;
+import com.onetarget.common.mvp.MvpFragment;
 import com.onetarget.onetargetdemo2.ui.main.fragment.FunctionFragment;
 import com.onetarget.onetargetdemo2.ui.main.fragment.HomeFragment;
 import com.onetarget.onetargetdemo2.ui.main.fragment.PersonCenterFragment;

@@ -2,8 +2,8 @@ package com.onetarget.onetargetdemo2.ui.login;
 
 import android.text.TextUtils;
 
-import com.onetarget.onetargetdemo2.mvp.BaseMode;
-import com.onetarget.onetargetdemo2.net.AppConstants;
+import com.onetarget.common.mvp.BaseMode;
+import com.onetarget.common.net.AppConstants;
 
 
 public class TokenDataMode extends BaseMode {

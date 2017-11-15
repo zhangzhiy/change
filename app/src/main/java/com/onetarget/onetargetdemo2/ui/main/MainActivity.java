@@ -6,7 +6,7 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.onetarget.onetargetdemo2.R;
-import com.onetarget.onetargetdemo2.mvp.MvpActivity;
+import com.onetarget.common.mvp.MvpActivity;
 import com.onetarget.onetargetdemo2.utils.FragmentSkipUtil;
 import com.onetarget.onetargetdemo2.utils.NormalTitleBar;
 

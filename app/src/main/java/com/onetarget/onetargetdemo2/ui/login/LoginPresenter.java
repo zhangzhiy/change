@@ -4,11 +4,11 @@ import android.content.Context;
 import android.text.TextUtils;
 
 import com.onetarget.onetargetdemo2.R;
-import com.onetarget.onetargetdemo2.mvp.rx.scheduler.MvpRxPresenter;
-import com.onetarget.onetargetdemo2.net.ApiService;
-import com.onetarget.onetargetdemo2.net.AppConstants;
-import com.onetarget.onetargetdemo2.net.RetrofitUtils;
-import com.onetarget.onetargetdemo2.utils.Logger;
+import com.onetarget.common.mvp.rx.scheduler.MvpRxPresenter;
+import com.onetarget.onetargetdemo2.api.ApiService;
+import com.onetarget.common.net.AppConstants;
+import com.onetarget.common.net.RetrofitUtils;
+import com.onetarget.common.utils.Logger;
 
 import rx.Observable;
 import rx.functions.Func1;

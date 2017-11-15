@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.onetarget.onetargetdemo2.R;
-import com.onetarget.onetargetdemo2.mvp.MvpActivity;
+import com.onetarget.common.mvp.MvpActivity;
 import com.onetarget.onetargetdemo2.utils.NormalTitleBar;
 
 import butterknife.BindView;

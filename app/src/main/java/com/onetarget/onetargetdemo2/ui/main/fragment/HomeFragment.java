@@ -1,8 +1,8 @@
 package com.onetarget.onetargetdemo2.ui.main.fragment;
 
 import com.onetarget.onetargetdemo2.R;
-import com.onetarget.onetargetdemo2.mvp.MvpFragment;
-import com.onetarget.onetargetdemo2.mvp.MvpPresenter;
+import com.onetarget.common.mvp.MvpFragment;
+import com.onetarget.common.mvp.MvpPresenter;
 
 /**
  * Created by zzy on 2017/9/5.

@@ -7,10 +7,10 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import com.onetarget.onetargetdemo2.R;
-import com.onetarget.onetargetdemo2.mvp.MvpActivity;
+import com.onetarget.common.mvp.MvpActivity;
 import com.onetarget.onetargetdemo2.utils.NormalTitleBar;
-import com.onetarget.onetargetdemo2.utils.ToastUtil;
-import com.onetarget.onetargetdemo2.utils.Utils;
+import com.onetarget.common.utils.ToastUtil;
+import com.onetarget.common.utils.Utils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

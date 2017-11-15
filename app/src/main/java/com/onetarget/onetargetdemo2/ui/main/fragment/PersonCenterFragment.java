@@ -1,23 +1,18 @@
 package com.onetarget.onetargetdemo2.ui.main.fragment;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.onetarget.onetargetdemo2.R;
-import com.onetarget.onetargetdemo2.mvp.MvpFragment;
-import com.onetarget.onetargetdemo2.mvp.MvpPresenter;
+import com.onetarget.common.mvp.MvpFragment;
+import com.onetarget.common.mvp.MvpPresenter;
 import com.onetarget.onetargetdemo2.ui.leakcanary.LeakcanaryActivity;
 import com.onetarget.onetargetdemo2.ui.login.LoginActivity;
 import com.onetarget.onetargetdemo2.ui.permission.PermissionActivity;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
 
 /**
  * Created by zzy on 2017/9/5.
