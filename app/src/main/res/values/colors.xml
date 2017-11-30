@@ -9,7 +9,7 @@
     <color name="YT_E5E5E5">#E5E5E5</color>
     <color name="YT_EEEEEE">#EEEEEE</color>
     <color name="YT_8E8E8E">#8E8E8E</color>
-    <color name="YT_338be9">#338be9</color>
+    <color name="YT_338be9">#19e965</color>
     <color name="YT_4DA8F6">#4DA8F6</color>
 
     <color name="YT_62a4eb">#62a4eb</color>
@@ -74,4 +74,7 @@
     <color name="YT_929292">#929292</color>
     <color name="YT_9B9B9B">#9B9B9B</color>
     <color name="YT_96C9FF">#96C9FF</color>
+    <color name="tab_gb">#F3F5F4</color>
+    <color name="tab_normal_color">#515051</color>
+    <color name="tab_selected_color">#D33D3C</color>
 </resources>

@@ -26,6 +26,7 @@
         android:theme="@style/YtAppStyle">
         <activity
             android:name="com.onetarget.onetargetdemo2.ui.main.MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/YtAppStyle">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -47,6 +48,14 @@
             android:windowSoftInputMode="stateHidden|adjustResize"/>
         <activity
             android:name=".ui.leakcanary.LeakcanaryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".ui.constraintlayout.ConstrainLayoutActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".ui.navigationbar.BottonNavigationBarActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize"/>
     </application>

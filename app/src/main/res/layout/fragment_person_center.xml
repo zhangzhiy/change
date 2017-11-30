@@ -21,5 +21,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="沉浸式状态栏"/>
+    <Button
+        android:id="@+id/bt_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="约束布局"/>
+  <Button
+        android:id="@+id/bt_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="底部导航栏"/>
 
 </LinearLayout>
