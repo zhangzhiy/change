@@ -72,6 +72,7 @@ public class ConstrainLayoutActivity extends MvpActivity {
     }
 
 
+
     @OnClick({R.id.button2, R.id.button3, R.id.button4})
     public void onViewClicked(View view) {
         switch (view.getId()) {
