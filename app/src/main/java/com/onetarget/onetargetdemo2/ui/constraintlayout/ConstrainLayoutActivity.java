@@ -71,11 +71,6 @@ public class ConstrainLayoutActivity extends MvpActivity {
         return new ConstraintLayoutPresenter(this);
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        ButterKnife.bind(this);
-    }
 
     @OnClick({R.id.button2, R.id.button3, R.id.button4})
     public void onViewClicked(View view) {
