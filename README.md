@@ -14,4 +14,7 @@
 ### 9.使用leakcanary进行内存泄露检测
 ### 10.自定义通用标题栏
 ### 11.BottomNavigationView实现首页fragment的切换
+### 12.框架抽取出来作为类库
+### 13.加入ConstrainLayout布局
+### 14.实现自定义底部导航栏，支持消息，通知，以及加载状态
 
