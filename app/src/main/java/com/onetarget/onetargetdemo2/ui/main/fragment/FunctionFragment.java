@@ -9,6 +9,7 @@ import com.onetarget.common.mvp.MvpPresenter;
  */
 
 public class FunctionFragment extends MvpFragment {
+
     @Override
     public MvpPresenter createPresenter() {
         return new FunctionPresenter(getActivity());

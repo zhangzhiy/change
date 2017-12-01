@@ -8,6 +8,7 @@ import com.onetarget.onetargetdemo2.R;
 import com.onetarget.common.mvp.MvpFragment;
 import com.onetarget.common.mvp.MvpPresenter;
 import com.onetarget.onetargetdemo2.ui.constraintlayout.ConstrainLayoutActivity;
+import com.onetarget.onetargetdemo2.ui.filedownload.FileDownloadActivity;
 import com.onetarget.onetargetdemo2.ui.leakcanary.LeakcanaryActivity;
 import com.onetarget.onetargetdemo2.ui.login.LoginActivity;
 import com.onetarget.onetargetdemo2.ui.navigationbar.BottonNavigationBarActivity;
@@ -39,7 +40,8 @@ public class PersonCenterFragment extends MvpFragment {
     }
 
     @OnClick({R.id.bt_getMessage, R.id.bt_permission,
-            R.id.bt_transucent,R.id.bt_constraint_layout,R.id.bt_navigation_bar})
+            R.id.bt_transucent,R.id.bt_constraint_layout,
+            R.id.bt_navigation_bar,R.id.bt_file_download})
     public void onClick(View v) {
         Intent intent;
         switch (v.getId()) {
@@ -61,6 +63,10 @@ public class PersonCenterFragment extends MvpFragment {
                 break;
             case R.id.bt_navigation_bar:
                 intent = new Intent(getActivity(), BottonNavigationBarActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.bt_file_download:
+                intent = new Intent(getActivity(), FileDownloadActivity.class);
                 startActivity(intent);
                 break;
         }
