@@ -16,10 +16,12 @@
 
 package com.onetarget.common.mvp;
 
+import android.support.v4.util.Preconditions;
+
 import java.lang.ref.WeakReference;
 
 /**
- * A base implementation of a {@link MvpPresenter} that uses a <b>WeakReference</b> for referring
+ * A base implementation of a {@link IPresenter} that uses a <b>WeakReference</b> for referring
  * to the attached view.
  * <p>
  * You should always check {@link #isViewAttached()} to check if the view is attached to this
@@ -29,7 +31,7 @@ import java.lang.ref.WeakReference;
  * @author Hannes Dorfmann
  * @since 1.0.0
  */
-public class MvpBasePresenter<V extends MvpView> implements MvpPresenter<V> {
+public class MvpBasePresenter<V extends IView> implements IPresenter<V> {
 
     private WeakReference<V> viewRef;
 
@@ -37,6 +39,7 @@ public class MvpBasePresenter<V extends MvpView> implements MvpPresenter<V> {
     public void attachView(V view) {
         viewRef = new WeakReference<V>(view);
     }
+
 
     /**
      * Get the attached view. You should always call {@link #isViewAttached()} to check if the view

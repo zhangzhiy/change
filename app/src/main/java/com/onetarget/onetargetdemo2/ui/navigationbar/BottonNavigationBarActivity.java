@@ -5,12 +5,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.view.animation.Animation;
-import android.view.animation.RotateAnimation;
-import android.widget.ImageView;
 
 import com.onetarget.common.mvp.MvpActivity;
-import com.onetarget.common.mvp.MvpPresenter;
+import com.onetarget.common.mvp.IPresenter;
 import com.onetarget.common.view.BottomBarItem;
 import com.onetarget.common.view.BottomBarLayout;
 import com.onetarget.onetargetdemo2.R;
@@ -102,7 +99,7 @@ public class BottonNavigationBarActivity extends MvpActivity {
     }
 
     @Override
-    public MvpPresenter createPresenter() {
+    public IPresenter createPresenter() {
         return new BottonNavigationBarPresenter(this);
     }
 

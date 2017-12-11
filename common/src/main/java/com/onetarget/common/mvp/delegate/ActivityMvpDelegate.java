@@ -19,8 +19,8 @@ package com.onetarget.common.mvp.delegate;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.onetarget.common.mvp.MvpPresenter;
-import com.onetarget.common.mvp.MvpView;
+import com.onetarget.common.mvp.IView;
+import com.onetarget.common.mvp.IPresenter;
 
 
 /**
@@ -43,12 +43,12 @@ import com.onetarget.common.mvp.MvpView;
  * </ul>
  *
  *
- * @param <V> The type of {@link MvpView}
- * @param <P> The type of {@link MvpPresenter}
+ * @param <V> The type of {@link IView}
+ * @param <P> The type of {@link IPresenter}
  * @author Hannes Dorfmann
  * @since 1.1.0
  */
-public interface ActivityMvpDelegate<V extends MvpView, P extends MvpPresenter<V>> {
+public interface ActivityMvpDelegate<V extends IView, P extends IPresenter<V>> {
 
     /**
      * This method must be called from {@link Activity#onCreate(Bundle)}.

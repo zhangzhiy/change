@@ -22,8 +22,8 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.View;
 
-import com.onetarget.common.mvp.MvpPresenter;
-import com.onetarget.common.mvp.MvpView;
+import com.onetarget.common.mvp.IView;
+import com.onetarget.common.mvp.IPresenter;
 
 
 /**
@@ -47,12 +47,12 @@ import com.onetarget.common.mvp.MvpView;
  * </ul>
  *
  *
- * @param <V> The type of {@link MvpView}
- * @param <P> The type of {@link MvpPresenter}
+ * @param <V> The type of {@link IView}
+ * @param <P> The type of {@link IPresenter}
  * @author Hannes Dorfmann
  * @since 1.1.0
  */
-public interface FragmentMvpDelegate<V extends MvpView, P extends MvpPresenter<V>> {
+public interface FragmentMvpDelegate<V extends IView, P extends IPresenter<V>> {
 
     /**
      * Must be called from {@link Fragment#onCreate(Bundle)}

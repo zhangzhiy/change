@@ -6,7 +6,7 @@ import android.widget.Button;
 
 import com.onetarget.onetargetdemo2.R;
 import com.onetarget.common.mvp.MvpFragment;
-import com.onetarget.common.mvp.MvpPresenter;
+import com.onetarget.common.mvp.IPresenter;
 import com.onetarget.onetargetdemo2.ui.constraintlayout.ConstrainLayoutActivity;
 import com.onetarget.onetargetdemo2.ui.filedownload.FileDownloadActivity;
 import com.onetarget.onetargetdemo2.ui.leakcanary.LeakcanaryActivity;
@@ -30,7 +30,7 @@ public class PersonCenterFragment extends MvpFragment {
     Button btTransucent;
 
     @Override
-    public MvpPresenter createPresenter() {
+    public IPresenter createPresenter() {
         return new PersonCenterPresenter(getActivity());
     }
 

@@ -15,9 +15,8 @@ import com.liulishuo.filedownloader.BaseDownloadTask;
 import com.liulishuo.filedownloader.FileDownloadSampleListener;
 import com.liulishuo.filedownloader.FileDownloader;
 import com.onetarget.common.mvp.MvpActivity;
-import com.onetarget.common.mvp.MvpPresenter;
+import com.onetarget.common.mvp.IPresenter;
 import com.onetarget.onetargetdemo2.R;
-import com.onetarget.onetargetdemo2.ui.constraintlayout.ConstraintLayoutPresenter;
 import com.onetarget.onetargetdemo2.utils.NormalTitleBar;
 import com.yanzhenjie.permission.AndPermission;
 import com.yanzhenjie.permission.Permission;
@@ -61,7 +60,7 @@ public class FileDownloadActivity extends MvpActivity {
     protected void init() {
         mContext=this;
 
-        commonTitle.setTitleText("LeakCanary");
+        commonTitle.setTitleText("FileDownload");
         commonTitle.setOnBackListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -128,7 +127,7 @@ public class FileDownloadActivity extends MvpActivity {
     }
 
     @Override
-    public MvpPresenter createPresenter() {
+    public IPresenter createPresenter() {
         return new FileDownloadPresenter(this);
     }
 

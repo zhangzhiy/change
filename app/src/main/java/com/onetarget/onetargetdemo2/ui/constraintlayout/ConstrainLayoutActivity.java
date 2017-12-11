@@ -1,6 +1,5 @@
 package com.onetarget.onetargetdemo2.ui.constraintlayout;
 
-import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.Guideline;
 import android.view.View;
@@ -9,12 +8,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.onetarget.common.mvp.MvpActivity;
-import com.onetarget.common.mvp.MvpPresenter;
+import com.onetarget.common.mvp.IPresenter;
 import com.onetarget.onetargetdemo2.R;
 import com.onetarget.onetargetdemo2.utils.NormalTitleBar;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -67,7 +65,7 @@ public class ConstrainLayoutActivity extends MvpActivity {
     }
 
     @Override
-    public MvpPresenter createPresenter() {
+    public IPresenter createPresenter() {
         return new ConstraintLayoutPresenter(this);
     }
 

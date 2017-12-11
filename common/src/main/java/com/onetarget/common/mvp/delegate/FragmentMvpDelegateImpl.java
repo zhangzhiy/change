@@ -21,20 +21,20 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
-import com.onetarget.common.mvp.MvpPresenter;
-import com.onetarget.common.mvp.MvpView;
+import com.onetarget.common.mvp.IPresenter;
+import com.onetarget.common.mvp.IView;
 
 
 /**
  * * The default implementation of {@link FragmentMvpDelegate}
  *
- * @param <V> The type of {@link MvpView}
- * @param <P> The type of {@link MvpPresenter}
+ * @param <V> The type of {@link IView}
+ * @param <P> The type of {@link IPresenter}
  * @author Hannes Dorfmann
  * @see FragmentMvpDelegate
  * @since 1.1.0
  */
-public class FragmentMvpDelegateImpl<V extends MvpView, P extends MvpPresenter<V>>
+public class FragmentMvpDelegateImpl<V extends IView, P extends IPresenter<V>>
     implements FragmentMvpDelegate<V, P> {
 
   protected MvpDelegateCallback<V, P> delegateCallback;

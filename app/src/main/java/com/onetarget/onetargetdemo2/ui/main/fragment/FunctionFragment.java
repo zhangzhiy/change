@@ -2,7 +2,7 @@ package com.onetarget.onetargetdemo2.ui.main.fragment;
 
 import com.onetarget.onetargetdemo2.R;
 import com.onetarget.common.mvp.MvpFragment;
-import com.onetarget.common.mvp.MvpPresenter;
+import com.onetarget.common.mvp.IPresenter;
 
 /**
  * Created by zzy on 2017/9/5.
@@ -11,7 +11,7 @@ import com.onetarget.common.mvp.MvpPresenter;
 public class FunctionFragment extends MvpFragment {
 
     @Override
-    public MvpPresenter createPresenter() {
+    public IPresenter createPresenter() {
         return new FunctionPresenter(getActivity());
     }
 

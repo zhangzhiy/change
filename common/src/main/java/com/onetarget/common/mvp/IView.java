@@ -22,6 +22,6 @@ package com.onetarget.common.mvp;
  * @author Hannes Dorfmann
  * @since 1.0.0
  */
-public interface MvpView {
+public interface IView {
 
 }

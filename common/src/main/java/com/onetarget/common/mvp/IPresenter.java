@@ -22,7 +22,7 @@ package com.onetarget.common.mvp;
  * @author Hannes Dorfmann
  * @since 1.0.0
  */
-public interface MvpPresenter<V extends MvpView> {
+public interface IPresenter<V extends IView> {
 
     /**
      * Set or attach the view to this presenter

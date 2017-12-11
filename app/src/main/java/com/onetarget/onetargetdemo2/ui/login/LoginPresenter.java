@@ -3,6 +3,7 @@ package com.onetarget.onetargetdemo2.ui.login;
 import android.content.Context;
 import android.text.TextUtils;
 
+import com.onetarget.common.mvp.MvpBasePresenter;
 import com.onetarget.onetargetdemo2.R;
 import com.onetarget.common.mvp.rx.scheduler.MvpRxPresenter;
 import com.onetarget.onetargetdemo2.api.ApiService;
@@ -17,11 +18,10 @@ import rx.functions.Func1;
  * Created by zzy on 2017/8/30.
  */
 
-public class LoginPresenter extends MvpRxPresenter<ILoginView, LoginDataMode> {
+public class LoginPresenter extends MvpRxPresenter<ILoginView,LoginDataMode> {
     private static final String TAG = "LoginPresenter";
     private Context mContext;
     private ApiService mApiService;
-
     public LoginPresenter(Context context) {
         this.mContext = context;
         mApiService = RetrofitUtils.createApi(ApiService.class);

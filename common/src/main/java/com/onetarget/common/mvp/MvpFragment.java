@@ -28,14 +28,14 @@ import com.onetarget.common.mvp.delegate.MvpDelegateCallback;
 
 
 /**
- * A {@link QuickFragment} that uses an {@link MvpPresenter} to implement a Model-View-Presenter
+ * A {@link QuickFragment} that uses an {@link IPresenter} to implement a Model-View-Presenter
  * architecture
  *
  * @author Hannes Dorfmann
  * @since 1.0.0
  */
-public abstract class MvpFragment<V extends MvpView, P extends MvpPresenter<V>>
-    extends QuickFragment implements MvpDelegateCallback<V, P>, MvpView {
+public abstract class MvpFragment<V extends IView, P extends IPresenter<V>>
+    extends QuickFragment implements MvpDelegateCallback<V, P>, IView {
 
   protected FragmentMvpDelegate<V, P> mvpDelegate;
 

@@ -34,14 +34,14 @@ import rx.schedulers.Schedulers;
 
 
 /**
- * A {@link QuickActivity} that uses an {@link MvpPresenter} to implement a Model-View-Presenter
+ * A {@link QuickActivity} that uses an {@link IPresenter} to implement a Model-View-Presenter
  * Architecture.
  *
  * @author Hannes Dorfmann
  * @since 1.0.0
  */
-public abstract class MvpActivity<V extends MvpView, P extends MvpPresenter<V>>extends QuickActivity
-        implements MvpDelegateCallback<V, P>, MvpView {
+public abstract class MvpActivity<V extends IView, P extends IPresenter<V>>extends QuickActivity
+        implements MvpDelegateCallback<V, P>, IView {
 
   protected ActivityMvpDelegate mvpDelegate;
   protected P presenter;
@@ -157,7 +157,7 @@ public abstract class MvpActivity<V extends MvpView, P extends MvpPresenter<V>>e
   /**
    * Instantiate a presenter instance
    *
-   * @return The {@link MvpPresenter} for this view
+   * @return The {@link IPresenter} for this view
    */
   public abstract P createPresenter();
 
@@ -177,7 +177,7 @@ public abstract class MvpActivity<V extends MvpView, P extends MvpPresenter<V>>e
    */
   protected ActivityMvpDelegate<V, P> getMvpDelegate() {
     if (mvpDelegate == null) {
-      mvpDelegate = new ActivityMvpDelegateImpl(this);
+      mvpDelegate = new ActivityMvpDelegateImpl(this,this);
     }
 
     return mvpDelegate;

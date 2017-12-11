@@ -5,7 +5,7 @@ import android.widget.Button;
 
 import com.onetarget.onetargetdemo2.R;
 import com.onetarget.common.mvp.MvpActivity;
-import com.onetarget.common.mvp.MvpPresenter;
+import com.onetarget.common.mvp.IPresenter;
 import com.onetarget.onetargetdemo2.utils.NormalTitleBar;
 
 import butterknife.BindView;
@@ -47,7 +47,7 @@ public class TransucentActivity extends MvpActivity {
     }
 
     @Override
-    public MvpPresenter createPresenter() {
+    public IPresenter createPresenter() {
         return new TransucentPersenter(this);
     }
 

@@ -16,30 +16,35 @@
 
 package com.onetarget.common.mvp.delegate;
 
+import android.app.Activity;
 import android.os.Bundle;
 
-import com.onetarget.common.mvp.MvpPresenter;
-import com.onetarget.common.mvp.MvpView;
+import com.onetarget.common.mvp.IPresenter;
+import com.onetarget.common.mvp.IView;
 
 
 /**
  * The concrete implementation of {@link}
  *
- * @param <V> The type of {@link MvpView}
- * @param <P> The type of {@link MvpPresenter}
+ * @param <V> The type of {@link IView}
+ * @param <P> The type of {@link IPresenter}
  * @author Hannes Dorfmann
  * @see ActivityMvpDelegate
  * @since 1.1.0
  */
-public class ActivityMvpDelegateImpl<V extends MvpView, P extends MvpPresenter<V>> implements ActivityMvpDelegate {
+public class ActivityMvpDelegateImpl<V extends IView, P extends IPresenter<V>> implements ActivityMvpDelegate {
 
     protected MvpInternalDelegate<V, P> internalDelegate;
     protected MvpDelegateCallback<V, P> delegateCallback;
+    protected Activity mActivity;
 
-    public ActivityMvpDelegateImpl(MvpDelegateCallback<V, P> delegateCallback) {
+
+    public ActivityMvpDelegateImpl(Activity mActivity ,MvpDelegateCallback<V, P> delegateCallback) {
+        this.mActivity=mActivity;
         if (delegateCallback == null) {
             throw new NullPointerException("MvpDelegateCallback is null!");
         }
+
         this.delegateCallback = delegateCallback;
     }
 

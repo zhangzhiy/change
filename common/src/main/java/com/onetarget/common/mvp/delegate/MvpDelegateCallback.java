@@ -17,8 +17,8 @@
 package com.onetarget.common.mvp.delegate;
 
 
-import com.onetarget.common.mvp.MvpPresenter;
-import com.onetarget.common.mvp.MvpView;
+import com.onetarget.common.mvp.IPresenter;
+import com.onetarget.common.mvp.IView;
 
 /**
  * The MvpDelegate callback that will be called from {@link ActivityMvpDelegate} or {@link
@@ -26,12 +26,12 @@ import com.onetarget.common.mvp.MvpView;
  * Activity,
  * Fragment or android.view.View that you want to support mosbys mvp.y
  *
- * @param <V> The type of {@link MvpView}
- * @param <P> The type of {@link MvpPresenter}
+ * @param <V> The type of {@link IView}
+ * @param <P> The type of {@link IPresenter}
  * @author Hannes Dorfmann
  * @since 1.1.0
  */
-public interface MvpDelegateCallback<V extends MvpView, P extends MvpPresenter<V>> {
+public interface MvpDelegateCallback<V extends IView, P extends IPresenter<V>> {
 
     /**
      * Creates the presenter instance
@@ -57,14 +57,14 @@ public interface MvpDelegateCallback<V extends MvpView, P extends MvpPresenter<V
     void setPresenter(P presenter);
 
     /**
-     * Get the MvpView for the presenter
+     * Get the IView for the presenter
      *
      * @return The view associated with the presenter
      */
     V getMvpView();
 
     /**
-     * Is the view retaining? This boolean flag is used for {@link MvpPresenter#detachView(boolean)}
+     * Is the view retaining? This boolean flag is used for {@link IPresenter#detachView(boolean)}
      * as parameter.
      *
      * @return true if the view is retaining, hence the presenter should be retaining as well.

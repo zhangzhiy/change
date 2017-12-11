@@ -3,8 +3,10 @@ package com.onetarget.common.mvp.rx.scheduler;
 
 import android.content.Context;
 
+import com.onetarget.common.mvp.BaseMode;
+import com.onetarget.common.mvp.IModel;
+import com.onetarget.common.mvp.IView;
 import com.onetarget.common.mvp.MvpBasePresenter;
-import com.onetarget.common.mvp.MvpView;
 import com.onetarget.common.mvp.rx.BaseSubscriber;
 import rx.Observable;
 import rx.Subscriber;
@@ -22,7 +24,7 @@ import rx.Subscriber;
  * @author Hannes Dorfmann
  * @since 1.1.0
  */
-public abstract class MvpRxPresenter<V extends MvpView, M> extends MvpBasePresenter<V> {
+public abstract class MvpRxPresenter<V extends IView, M extends BaseMode> extends MvpBasePresenter<V> {
 
   protected Subscriber<M> subscriber;
   /**
