@@ -24,7 +24,7 @@ import rx.Subscriber;
  * @author Hannes Dorfmann
  * @since 1.1.0
  */
-public abstract class MvpRxPresenter<V extends IView, M extends BaseMode> extends MvpBasePresenter<V> {
+public abstract class MvpRxPresenter<V extends IView, M > extends MvpBasePresenter<V> {
 
   protected Subscriber<M> subscriber;
   /**
